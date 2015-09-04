@@ -26,18 +26,22 @@ def landing(request):
 
 @login_required
 def manual_entry(request):
+    print 'request user = ', request.user
 
     if request.method == 'POST':
-        form = CreateSurveyResponse(request.POST)
+        form = CreateSurveyResponse(request.POST, author=request.user)
+        # print 'before validation'
+        print form.is_valid()
         if form.is_valid():
+            # print request.user
             author = request.user
-            form.save(author)
-            return HttpResponseRedirect(reverse('landing'))
+            # print 'Before save'
+            form.save()
+            return HttpResponseRedirect(reverse('manual_entry'))
+
 
     else:
-        form = CreateSurveyResponse()
-
-
+        form = CreateSurveyResponse(author=request.user)
 
     return render(
         request,

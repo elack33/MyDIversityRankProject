@@ -173,7 +173,7 @@ class SurveyResponses(models.Model):
         blank=True,
         related_name='i02',
     )
-    interest023 = models.ForeignKey(
+    interest03 = models.ForeignKey(
         Interests,
         null=True,
         blank=True,
