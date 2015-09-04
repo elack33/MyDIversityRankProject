@@ -1,0 +1,18 @@
+{% extends 'mdr_base.html' %}
+
+{% block title %} MDR - Manual Entry {% endblock %}
+
+{% block header %}Welcome {{ user }}! {% endblock %}
+
+{% block content %}Let's enter some data!
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save data!">
+</form>
+
+
+
+{% endblock %}

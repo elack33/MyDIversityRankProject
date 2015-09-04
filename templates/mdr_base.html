@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Diversity Rank{% endblock %}</title>
+    {% load staticfiles %}
+    <link href="{% static "mdr.css" %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="header">
+        <h1>{% block header %}{% endblock %}</h1>
+    </div>
+
+    <div class="textblock">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="links">
+        {% block links %}
+            <table class="nav">
+            <tr>
+                <td>
+                    <a href="/landing">Main Page</a>
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <a href="/manual_entry">Manual Entry</a>
+                </td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="/logout">Logout</a>
+                    {% else %}
+                        <a href="/login">Login</a>
+                    {% endif %}
+
+                </td>
+        </table>
+        {% endblock %}
+    </div>
+
+
+</body>
+</html>

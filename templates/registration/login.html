@@ -1,0 +1,70 @@
+{% extends 'mdr_base.html' %}
+
+{% block header %}Login{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <table class="purple">
+        <tr>
+            <td colspan="2">
+                {{ form.non_field_errors }}
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Username:
+            </td>
+            <td>
+                {{ form.username.errors }}
+                {{ form.username }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                {{ form.password.errors }}
+                {{ form.password }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                    <input type="submit" value="Log me in!">
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                    <a href="{% url "password_reset_recover" %}"> Forget your password?</a>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                New User?
+            </td>
+            <td>
+                <a href="/create_user">Create New User!</a>
+            </td>
+        </tr>
+    </table>
+</form>
+{% endblock %}
+
+
+
+<!--{% block ready %}-->
+    <!--$('#password').on('click', function() {-->
+        <!--$('#toobad').show().delay(2000).fadeOut();-->
+    <!--});-->
+
+    <!--$('#newuser').on('click', function() {-->
+        <!--$('#goaway').show().delay(2000).fadeOut();-->
+    <!--});-->
+<!--{% endblock %}-->
