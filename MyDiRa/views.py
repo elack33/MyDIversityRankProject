@@ -3,11 +3,9 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 
-import json
-
 from .forms import CreateSurveyResponse
 from .models import SurveyResponses
-from .reports import ChartData
+
 
 # Create your views here.
 
@@ -54,6 +52,7 @@ def manual_entry(request):
         }
     )
 
+
 @login_required
 def show_data(request):
     author = request.user
@@ -70,14 +69,3 @@ def show_data(request):
     )
 
 
-def chart_data_json(request):
-    data = {}
-    params = request.GET
-
-    days = params.get('days', 0)
-    name = params.get('name', '')
-    if name == 'avg_by_day':
-        data['chart_data'] = ChartData.get_avg_by_day(
-            user=request.user, days=int(days))
-
-    return HttpResponse(json.dumps(data), content_type='application/json')

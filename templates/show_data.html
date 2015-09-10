@@ -28,9 +28,6 @@
         white people = {{ white }}
     </p>
 
-<!--<div id="chart_space" style="width:100%; height:400px;">-->
-    <!--This is where the chart should be!-->
-<!--</div>-->
 
     <div class="panel panel-default">
         <div id="chart_panel" class="panel-body"
@@ -39,47 +36,16 @@
         </div>
     </div>
 
+{% endblock %}
 
 
 <div class="clear">&nbsp;</div>
 
-<script type="text/javascript">
-
-{% block ready %}
-
-    $("#chart_panel").click(function(){
-       $(this).css({"backgroundColor" : "blue"});
-    });
-
-{% endblock %}
 
 
-//    // Glucose Average by Day chart
-//     var avgByDayOptions = {
-//        chart: {
-//            renderTo: 'chart_panel',
-//            type: 'line',
-//        },
-//        legend: {enabled: false},
-//        title: {text: 'Average Glucose by Day'},
-//        subtitle: {text: 'Last 14 Days'},
-//        xAxis: {title: {text: null}, labels: {rotation: -45}},
-//        yAxis: {title: {text: null}},
-//        series: [{}],
-//    };
-//
-//    var chartDataUrl = "{% url 'chart_data_json' %}?name=avg_by_day"
-//        + "&days=14";
-//    $.getJSON(chartDataUrl,
-//        function(data) {
-//            avgByDayOptions.xAxis.categories = data['chart_data']['dates'];
-//            avgByDayOptions.series[0].name = 'Avg Glucose (mg/dL)';
-//            avgByDayOptions.series[0].data = data['chart_data']['values'];
-//            var chart = new Highcharts.Chart(avgByDayOptions);
-//    });
-//
-//} );
-</script>
+    {% block ready %}
+        chart1;
 
-{% endblock %}
+    {% endblock %}
+
 

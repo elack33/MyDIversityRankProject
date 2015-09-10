@@ -1,5 +1,5 @@
-$(function () {
-    $('#container').highcharts({
+ var chart1 = $(function () {
+    $('#chart_panel').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -26,27 +26,27 @@ $(function () {
             }
         },
         series: [{
-            name: "Brands",
+            name: "Stuff",
             colorByPoint: true,
             data: [{
-                name: "Microsoft Internet Explorer",
+                name: "Things!",
                 y: 56.33
             }, {
-                name: "Chrome",
+                name: "Nopes!",
                 y: 24.03,
                 sliced: true,
                 selected: true
             }, {
-                name: "Firefox",
+                name: "Laser kittens",
                 y: 10.38
             }, {
-                name: "Safari",
+                name: "Goats",
                 y: 4.77
             }, {
-                name: "Opera",
+                name: "Weaponized Back hair",
                 y: 0.91
             }, {
-                name: "Proprietary or Undetectable",
+                name: "Yups",
                 y: 0.2
             }]
         }]
