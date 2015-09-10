@@ -1,13 +1,14 @@
  var chart1 = $(function () {
     $('#chart_panel').highcharts({
         chart: {
+            backgroundColor: '#e0e0f0',
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
             type: 'pie'
         },
         title: {
-            text: 'Browser market shares January, 2015 to May, 2015'
+            text: "My Friends' Careers"
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -26,28 +27,49 @@
             }
         },
         series: [{
-            name: "Stuff",
+            name: "My Friends' Careers",
             colorByPoint: true,
             data: [{
-                name: "Things!",
-                y: 56.33
+                name: "Software Development",
+                y: 0
             }, {
-                name: "Nopes!",
-                y: 24.03,
+                name: "Customer Service",
+                y: 23.53,
                 sliced: true,
                 selected: true
             }, {
-                name: "Laser kittens",
-                y: 10.38
+                name: "Web Services",
+                y: 11.76
             }, {
-                name: "Goats",
-                y: 4.77
+                name: "Other",
+                y: 5.8
             }, {
-                name: "Weaponized Back hair",
-                y: 0.91
+                name: "Engineer",
+                y: 5.8
             }, {
-                name: "Yups",
-                y: 0.2
+                name: "Accounting/Bookkeeping",
+                y: 5.8
+            }, {
+                name: "Healthcare",
+                y: 5.8
+            }, {
+                name: "Retired",
+                y: 11.6
+            }, {
+                name: "Teaching",
+                y: 5.8
+            }, {
+                name: "Management",
+                y: 5.8
+            }, {
+                name: "Graphic Design",
+                y: 5.8
+            }, {
+                name: "Product Developer",
+                y: 5.8
+            }, {
+                name: "Editor",
+                y: 5.8
             }]
         }]
     });

@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, re
 from .models import Careers, SurveyResponses
 
 
-def show_data(request):
+def get_data(request):
     author = request.user
     total_surveys = SurveyResponses.objects.filter(author_id=author).count()
     accounting = SurveyResponses.objects.filter(author_id=author, Careers__career='Accounting').count()
@@ -63,3 +63,65 @@ def show_data(request):
     social_services = SurveyResponses.objects.filter(author_id=author, Careers__career='Social Services').count()
     warehouse = SurveyResponses.objects.filter(author_id=author, Careers__career='Warehouse').count()
     other = SurveyResponses.objects.filter(author_id=author, Careers__career='Other').count()
+
+    return {
+        'total_surveys': total_surveys,
+        'accounting': accounting,
+        'general_business': general_business,
+        'software_development': software_development,
+        'admin_clerical': admin_clerical,
+        'general_labor': general_labor,
+        'pharmaceutical': pharmaceutical,
+        'automotive': automotive,
+        'government': government,
+        'professional_services': professional_services,
+        'banking': banking,
+        'grocery': grocery,
+        'purchasing_procurement': purchasing_procurement,
+        'biotech': biotech,
+        'health_care': health_care,
+        'qa_quality_control': qa_quality_control,
+        'journalism': journalism,
+        'hotel_hospitality': hotel_hospitality,
+        'Real_Estate': Real_Estate,
+        'business_development': business_development,
+        'human_resources': human_resources,
+        'research': research,
+        'construction': construction,
+        'information_technology': information_technology,
+        'restaurant_food_service': restaurant_food_service,
+        'consultant': consultant,
+        'installation_repair': installation_repair,
+        'retail': retail,
+        'customer_service': customer_service,
+        'insurance': insurance,
+        'sales': sales,
+        'design': design,
+        'inventory': inventory,
+        'science': science,
+        'distribution_shipping': distribution_shipping,
+        'legal': legal,
+        'skilled_labor_trades': skilled_labor_trades,
+        'education_teaching': education_teaching,
+        'legal_admin': legal_admin,
+        'strategy_planning': strategy_planning,
+        'engineering': engineering,
+        'management': management,
+        'supply_chain': supply_chain,
+        'entry_level': entry_level,
+        'manufacturing': manufacturing,
+        'telecommunications': telecommunications,
+        'executive': executive,
+        'marketing': marketing,
+        'training': training,
+        'facilities': facilities,
+        'media': media,
+        'newspaper': newspaper,
+        'transportation': transportation,
+        'finance': finance,
+        'nonprofit': nonprofit,
+        'social_services': social_services,
+        'warehouse': warehouse,
+        'other': other
+
+    }

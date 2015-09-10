@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateSurveyResponse
 from .models import SurveyResponses
 
+from .careers import get_data
 
 # Create your views here.
 
@@ -59,13 +60,17 @@ def show_data(request):
     total_surveys = SurveyResponses.objects.filter(author_id=author).count()
     white_people = SurveyResponses.objects.filter(author_id=2, demographic__demographic='White').count()
 
+    # get_my_data = get_data(request)
+    # print get_my_data
+
+    accounting = SurveyResponses.objects.filter(author_id=author, career01__career='Accounting').count()
+    print accounting
+
     return render(
         request,
         'show_data.html',
-        context={
-            'total': total_surveys,
-            'white': white_people
-        }
+        # context= get_my_data
+
     )
 
 
