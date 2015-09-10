@@ -1,16 +1,5 @@
-<head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
-</head>
-
-<body>
-<div id="chart" style="width:100%; height:400px;"></div>
-
-<script>
-
-
 $(function () {
-    $('#chart').highcharts({
+    $('#container').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -63,6 +52,3 @@ $(function () {
         }]
     });
 });
-</script>
-
-</body>

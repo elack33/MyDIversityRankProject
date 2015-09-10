@@ -66,6 +66,14 @@ VALUES ('Single'), ('Living with Partner or Spouse'), ('Dating'), ('Married'),
 INSERT INTO MyDiRa_ogamy (title)
 VALUES ('Monogamy'), ('Open'), ('Swinging'), ('Monogamish'), ('Polyamory'), ('Other');
 
+INSERT INTO MyDiRa_surveyresponses (author_id, career01_id, career02_id, demographic_id, gender_id,
+	orientation_id, relationship_id, year_of_birth_id, 
+    interest01_id, interest02_id, interest03_id, interest04_id, interest05_id, 
+    interest06_id, interest07_id, interest08_id, interest09_id, interest10_id)
+VALUES 
+	(2, 57, 56, 7, 5, 5, 8, 99, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18),
+    (2, 34, 43, 3, 1, 1, 5, 56, 23, 11, 12, 13, 14, 15, 16, 17, 18, 19),
+	(2, 11, 13, 2, 2, 4, 8, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 
 

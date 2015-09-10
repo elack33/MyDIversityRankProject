@@ -51,3 +51,18 @@ def manual_entry(request):
         }
     )
 
+@login_required
+def show_data(request):
+    author = request.user
+    total_surveys = SurveyResponses.objects.filter(author_id=author).count()
+    white_people = SurveyResponses.objects.filter(author_id=2, demographic__demographic='White').count()
+
+
+    return render(
+        request,
+        'show_data.html',
+        context={
+            'total': total_surveys,
+            'white': white_people
+        }
+    )

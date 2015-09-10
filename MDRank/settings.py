@@ -41,6 +41,7 @@ INSTALLED_APPS = (
         #My apps
     # 'emailtools',
     'password_reset',
+    'highcharts',
     'MyDiRa'
 )
 

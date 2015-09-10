@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^login/$', auth_views.login),
     url(r'^logout/$', auth_views.logout),
     url(r'^manual_entry/$', mdr_views.manual_entry, name='manual'),
+    url(r'^show_data/$', mdr_views.show_data, name='show_data'),
 ]
