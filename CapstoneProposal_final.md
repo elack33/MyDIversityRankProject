@@ -28,7 +28,7 @@ A page that allows the logged in user to enter the data from their circles, and 
 5. Data presentation template & view: Setup the functions and javascript to generate the pie charts on demand. 
   1. Math and formulas for calculating percentages
  	--DONE 
-6.. Make it look nice no 90s design...
+6. Make it look nice no 90s design...
 	--DONE
 
 
