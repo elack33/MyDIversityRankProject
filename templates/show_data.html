@@ -20,19 +20,12 @@
 
 {% block content %}Let's SHOW some data!
 
-    <p>
-        total = {{ total }}
-    </p>
-
-    <p>
-        white people = {{ white }}
-    </p>
 
 
     <div class="panel panel-default">
         <div id="chart_panel" class="panel-body"
             style="width:100%;height:314px">
-            Chart goes herex
+            <!--Chart goes herex-->
         </div>
     </div>
 
@@ -40,8 +33,67 @@
 
 
 <div class="clear">&nbsp;</div>
-
-
+    {% block extrajs2 %}
+        <script>
+            var accounting = {{ accounting|safe }}
+            var general_business = {{ general_business|safe }}
+            var software_development = {{ software_development|safe }}
+            var admin_clerical = {{ admin_clerical|safe }}
+            var general_labor = {{ general_labor|safe }}
+            var pharmaceutical = {{ pharmaceutical|safe }}
+            var automotive = {{ automotive|safe }}
+            var government = {{ government|safe }}
+            var professional_services = {{ professional_services|safe }}
+            var banking = {{ banking|safe }}
+            var grocery = {{ grocery|safe }}
+            var purchasing_procurement = {{ purchasing_procurement|safe }}
+            var biotech = {{ biotech|safe }}
+            var health_care = {{ health_care|safe }}
+            var qa_quality_control = {{ qa_quality_control|safe }}
+            var journalism = {{ journalism|safe }}
+            var hotel_hospitality = {{ hotel_hospitality|safe }}
+            var Real_Estate = {{ Real_Estate|safe }}
+            var business_development = {{ business_development|safe }}
+            var human_resources = {{ human_resources|safe }}
+            var research = {{ research|safe }}
+            var construction = {{ construction|safe }}
+            var information_technology = {{ information_technology|safe }}
+            var restaurant_food_service = {{ restaurant_food_service|safe }}
+            var consultant = {{ consultant|safe }}
+            var installation_repair = {{ installation_repair|safe }}
+            var retail = {{ retail|safe }}
+            var customer_service = {{ customer_service|safe }}
+            var insurance = {{ insurance|safe }}
+            var sales = {{ sales|safe }}
+            var design = {{ design|safe }}
+            var inventory = {{ inventory|safe }}
+            var science = {{ science|safe }}
+            var distribution_shipping = {{ distribution_shipping|safe }}
+            var legal = {{ legal|safe }}
+            var skilled_labor_trades = {{ skilled_labor_trades|safe }}
+            var education_teaching = {{ education_teaching|safe }}
+            var legal_admin = {{ legal_admin|safe }}
+            var strategy_planning = {{ strategy_planning|safe }}
+            var engineering = {{ engineering|safe }}
+            var management = {{ management|safe }}
+            var supply_chain = {{ supply_chain|safe }}
+            var entry_level = {{ entry_level|safe }}
+            var manufacturing = {{ manufacturing|safe }}
+            var telecommunications = {{ telecommunications|safe }}
+            var executive = {{ executive|safe }}
+            var marketing = {{ marketing|safe }}
+            var training = {{ training|safe }}
+            var facilities = {{ facilities|safe }}
+            var media = {{ media|safe }}
+            var newspaper = {{ newspaper|safe }}
+            var transportation = {{ transportation|safe }}
+            var finance = {{ finance|safe }}
+            var nonprofit = {{ nonprofit|safe }}
+            var social_services = {{ social_services|safe }}
+            var warehouse = {{ warehouse|safe }}
+            var other = {{ other }}
+        </script>
+    {% endblock %}
 
     {% block ready %}
         chart1;
